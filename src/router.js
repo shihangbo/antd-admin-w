@@ -3,6 +3,9 @@ import PropTypes from 'prop-types'
 import { Switch, Route, Redirect, routerRedux } from 'dva/router'
 import dynamic from 'dva/dynamic'
 import App from 'routes/app'
+import IndexSpin from './routes/index'
+
+dynamic.setDefaultLoadingComponent(() => <IndexSpin />)
 
 const { ConnectedRouter } = routerRedux
 
